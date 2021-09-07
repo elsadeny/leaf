@@ -96,6 +96,14 @@ Run:
 ./target/debug/leaf -h
 ```
 
+## Apple M1 Chip Users
+
+When building on M1 chip, the library will not be able to run on intel cheap.
+In this commit, just use command
+* make lib-osx-rosetta
+if there is some errors, add the architecture using rustup
+* rustup target install x86_64-apple-darwin
+
 ## License
 
 This project is licensed under the [Apache License 2.0](https://github.com/eycorsican/leaf/blob/master/LICENSE).

@@ -14,6 +14,10 @@ lib-dev:
 	cargo build -p leaf-ffi
 	cbindgen --config leaf-ffi/cbindgen.toml leaf-ffi/src/lib.rs > target/debug/leaf.h
 
+lib-osx-rosetta:
+	cargo build --target x86_64-apple-darwin -p leaf-ffi --release
+	cbindgen --config leaf-ffi/cbindgen.toml leaf-ffi/src/lib.rs > target/x86_64-apple-darwin/release/leaf.h
+
 local:
 	cargo build -p leaf-bin --release
 
