@@ -100,9 +100,18 @@ Run:
 
 When building on M1 chip, the library will not be able to run on intel cheap.
 In this commit, just use command
-* make lib-osx-rosetta
+
+Run:
+```sh
+make lib-osx-rosetta
+```
+
 if there is some errors, add the architecture using rustup
-* rustup target install x86_64-apple-darwin
+Run:
+```sh
+rustup target install x86_64-apple-darwin
+```
+
 
 ## License
 
